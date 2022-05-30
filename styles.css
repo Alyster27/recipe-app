@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #ece9e6;
+    background: -webkit-linear-gradient(to right, #ffffff, #ece9e6);
+    background: linear-gradient(to right, #ffffff, #ece9e6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.mobile-container {
+    background-color: #fff;
+    box-shadow: 0 0 10px 2px #3333331A;
+    border-radius: 3px;
+    overflow: hidden;
+    width: 400px;
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+header input {
+    background-color: rgb(243, 225, 255);
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-family: inherit;
+}
+
+header input:focus {
+    outline: none;
+    background-color: rgb(217, 161, 255);
+}
+
+header button {
+    background-color: rgb(243, 225, 255);
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+header button:hover {
+    background-color: rgb(217, 161, 255);
+}
+
+.favorite-container {
+    background-color: rgb(243, 225, 255);
+    padding: 0.5rem 1rem;
+    text-align: center;
+}
+
+.favorite-meals {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.favorite-meals li {
+    cursor: pointer;
+    position: relative;
+    margin: 5px;
+    width: 100px;
+}
+
+.favorite-meals li .clear {
+    background-color: transparent;
+    color: red;
+    position: absolute;
+    top: -0.3rem;
+    right: -0.3rem;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.favorite-meals li img {
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 2px #3333331a;
+    object-fit: cover;
+    height: 80px;
+    width: 80px;
+}
+
+.favorite-meals li span {
+    display: block;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.favorite-meals li:hover span {
+    white-space: normal;
+    overflow: auto;
+}
+
+.meal {
+    border-radius: 3px;
+    box-shadow: 0 0 10px 2px #3333331a;
+    margin: 1.5rem;
+    overflow: hidden;
+}
+
+.meal-header {
+    position: relative;
+}
+
+.meal-header .random {
+    position: absolute;
+    top: 10px;
+    background-color: #fff;
+    padding: 0.25rem 1rem;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.meal-header img {
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+}
+
+.meal-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.meal-body h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.meal-body .favorite-btn {
+    border: none;
+    background-color: transparent;
+    color: rgb(203, 203, 203);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.meal-body .favorite-btn.active {
+    color: red;
+}
+
+.popup-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background-color: rgb(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.popup-container.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.popup {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 0 2rem;
+    position: relative;
+    overflow: auto;
+    max-height: 100vh;
+    max-width: 600px;
+    width: 100%;
+}
+
+.popup #close-popup {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: transparent;
+    border: none;
+    color: rgb(194, 0, 0);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.meal-container h1 {
+    text-align: center;
+}
